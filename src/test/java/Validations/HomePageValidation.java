@@ -11,19 +11,18 @@ public class HomePageValidation {
 
 WebDriver driver;
 
-//	@Test(priority = 0, enabled=true)
-//	public void TC01_StartBrowserandValidatePageTitle() 
-//	{
-//		try {
-//		driver=LaunchBrowser.getDriver();
-//		System.out.print("Login Success");
-//			}
-//		catch (InterruptedException e) {
-//		
-//		e.printStackTrace();
-//	}
+	@Test(priority = 0, enabled=true)
+	public void TC01_StartBrowserandValidatePageTitle() 
+	{
+		try {
+		driver=LaunchBrowser.getDriver();
+		System.out.print("Login Success");
+			}
+		catch (InterruptedException e) {
 		
-//	}
+		e.printStackTrace();
+	}
+		
 	
 	@Test(priority =1 ,enabled =true)
 	public void TC02_VerifyMainPage() throws InterruptedException
@@ -32,14 +31,14 @@ WebDriver driver;
 		WebElement PersonalTab  = driver.findElement(By.xpath("//div[1]/div/a[1]"));
 		PersonalTab.click();
 		
-//		DirectionTabFunctions.ClickDirectionsTab(driver);
-//		System.out.println("DirectionsTab is visible");
-//		driver.wait(5000);
-//		PersonalTabFunctions.ClickPersonalTab(driver);
-//		driver.wait(5000);
-//		System.out.println("PersonalTab is visible");
-//		LiveTabFunctions.ClickLiveTab(driver);
-//		driver.wait(5000);
+		DirectionTabFunctions.ClickDirectionsTab(driver);
+		System.out.println("DirectionsTab is visible");
+		driver.wait(5000);
+		PersonalTabFunctions.ClickPersonalTab(driver);
+		driver.wait(5000);
+		System.out.println("PersonalTab is visible");
+		LiveTabFunctions.ClickLiveTab(driver);
+		driver.wait(5000);
 		System.out.println("LiveTab is visible");
 	
 	}
