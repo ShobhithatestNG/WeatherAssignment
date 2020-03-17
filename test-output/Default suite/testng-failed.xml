@@ -5,6 +5,7 @@
     <classes>
       <class name="Validations.HomePageValidation">
         <methods>
+          <include name="VerifyLaunchBrowser"/>
           <include name="TC02_VerifyMainPage"/>
         </methods>
       </class> <!-- Validations.HomePageValidation -->

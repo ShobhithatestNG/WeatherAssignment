@@ -3,42 +3,59 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.*;
 import AutomationModules.*;
 import PageObjects.DirectionsTab;
+import Utility.Constant;
 
 public class HomePageValidation {
 
-WebDriver driver;
+public static WebDriver driver;
 
-	@Test(priority = 0, enabled=true)
-	public void TC01_StartBrowserandValidatePageTitle() 
-	{
-		try {
-		driver=LaunchBrowser.getDriver();
-		System.out.print("Login Success");
-			}
-		catch (InterruptedException e) {
-		
-		e.printStackTrace();
-	}
-	}	
 	
-	@Test(priority =1 ,enabled =true)
+	
+@BeforeTest
+@Parameters("browser") 
+	public void VerifyLaunchBrowser(String browser) throws InterruptedException
+	{
+	try {
+		driver =LaunchBrowser.getDriver(browser);
+		System.out.print("Login Success");
+		}
+		catch (InterruptedException e) {
+		e.printStackTrace();
+		}
+	}
+		
+@Test(priority = 0, enabled=true)
+public void TC01_StartBrowserandValidatePageTitle() 
+{
+	String actualTitle = "";
+	driver.get(Constant.Base_URL);
+    driver.manage().window().maximize();
+    // get the actual value of the title
+    actualTitle = driver.getTitle();
+    Assert.assertEquals(actualTitle, Constant.HomepageTitle);
+}
+
+@Test(enabled=false)	
 	public void TC02_VerifyMainPage() throws InterruptedException
 	{
-		WebDriver driver=LaunchBrowser.getDriver();
-		WebElement PersonalTab  = driver.findElement(By.xpath("//div[1]/div/a[1]"));
+
+	driver.get(Constant.Base_URL);
+    driver.manage().window().maximize();
+	WebElement PersonalTab  = driver.findElement(By.xpath("//div[1]/div/a[1]"));
 		PersonalTab.click();
 		
 		DirectionTabFunctions.ClickDirectionsTab(driver);
 		System.out.println("DirectionsTab is visible");
-		driver.wait(5000);
+		//driver.wait(5000);
 		PersonalTabFunctions.ClickPersonalTab(driver);
-		driver.wait(5000);
+		
 		System.out.println("PersonalTab is visible");
 		LiveTabFunctions.ClickLiveTab(driver);
-		driver.wait(5000);
+		
 		System.out.println("LiveTab is visible");
 	
 	}

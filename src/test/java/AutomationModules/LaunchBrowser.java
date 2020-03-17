@@ -11,30 +11,51 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 public class LaunchBrowser {
 
 	static WebDriver driver ;
 
-	public static WebDriver getDriver() throws InterruptedException
+	public static WebDriver getDriver(String browser) throws InterruptedException
 	{
 		//create new folder for capturing Screenshots
 		String FolderName = new SimpleDateFormat("yyyy_MMM_dd").format(new Date());
 	    CreateFolder.CreateNewFolder(Constant.ScreenshotsLocation, FolderName);
-	   
-	    // Check browser
-	    System.setProperty("webdriver.chrome.driver","drivers/chrome/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		String actualTitle = "";
-		driver.get(Constant.Base_URL);
-        driver.manage().window().maximize();
-
-        // get the actual value of the title
-        actualTitle = driver.getTitle();
-        Assert.assertEquals(actualTitle, Constant.HomepageTitle);
-        WebElement SignIn =driver.findElement(By.linkText("Sign in"));
-        SignIn.click();
-        		 
-    return driver;
+		//String browserName = System.getProperty("browser");	
+		System.out.println("browser is"+ browser);
+		
+		if(browser.equalsIgnoreCase("CHROME"))
+		{
+			System.setProperty("webdriver.chrome.driver","drivers/chrome/chromedriver.exe");
+			driver = new ChromeDriver();
+		}
+		else if(browser.equalsIgnoreCase("FIREFOX"))
+		{
+			System.setProperty("webdriver.gecko.driver","drivers/firefox/geckodriver.exe");
+			driver = new FirefoxDriver();
+		}	
+		else if(browser.equalsIgnoreCase("SAFARI"))
+		{
+			driver = new SafariDriver();
+		}
+		else if(browser.equalsIgnoreCase("IE"))
+		{
+			System.setProperty("webdriver.edge.driver",".\\MicrosoftWebDriver.exe");
+			driver = new InternetExplorerDriver();
+		}
+		else
+		{
+			System.out.println("invalid Driver");
+			System.exit(0);
+		}
+		
+		return driver;
+		
+	
+	  		 
+   
 	}
 }
