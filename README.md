@@ -1,13 +1,18 @@
 # MapsynqAutomation
-# This git repository contains QA automation for the website: http://www.mapsynq.com/.
+## This git repository contains QA automation for the website: http://www.mapsynq.com/.
 
-The Programming language used is Java 
+## Pre- Requisites
+- Install java JDK and set up path
+- Install Maven
+
+## Programming language
+- Java 
 
 ## The Tools used to automate this web application are :
-	- • Selenium Webdriver - For automating the scripts
-	- • Eclipse - For IDE
-	- • TestNG - For Framework 
-	- • Maven - Build Tool -POM
+	 • Selenium Webdriver - For automating the scripts
+	 • Eclipse - For IDE
+	 • TestNG - For Framework 
+	 • Maven - Build Tool -POM
 
 ## The following features  are implemented in this Project:
 	1.  Tests are runnable from the command line
@@ -22,10 +27,10 @@ The Programming language used is Java
 	10.  Exceptions are handled
 
 ## Steps to run this Project :
-	-• Download GitBash - https://git-scm.com/downloads and set up Git for first time
-	-• Create a folder and clone this Repository to your local directory 
-	-• Open command prompt/Terminal and run this command: git clone https://github.com/ShobhithatestNG/MapsynqAutomation.git
-	-• once the Repository is downloaded in the local , go to working Directory 
+	• Download GitBash -[GitHub](https://git-scm.com/downloads) and set up Git for first time
+	• Create a folder and clone this Repository to your local directory 
+	• Open command prompt/Terminal and run this command: git clone https://github.com/ShobhithatestNG/MapsynqAutomation.git
+	• once the Repository is downloaded in the local , go to working Directory 
 
 ## Run the maven commands:
 maven command to run the project through command line by passing arguments:
