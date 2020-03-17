@@ -16,7 +16,7 @@
 
 ## The following features  are implemented in this Project:
 	1.  Tests are runnable from the command line
-	2.  Tests are run against a configurable host, we have used http://www.mapsynq.com as the default
+	2.  Tests are run against a configurable host, we have used [MAPSYNQ] (http://www.mapsynq.com/) as the default
 	3.  Tests are configured to run on a various browser eg Chrome, FireFox, Safari , IE
 	4.  Tests are configured to run on all OS combinations against a testing service eg: windows, MacOS
 	5.  Testing service credentials and all configuration settings are passed as environment variables
