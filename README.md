@@ -1,7 +1,7 @@
 # MapsynqAutomation
 This git repository contains QA automation for the website: http://www.mapsynq.com/.
 
-The Code/Programming language used is JAVA
+The Programming language used is JAVA
 
 The Tools used to automate this web application are :
 Selenium Webdriver - For automating the scripts
@@ -18,6 +18,8 @@ The following features  are implemented in this Project:
  Tests are configured to run in parallel
  The automation runs via the UI within a browser
  Solution produces a detailed and clean report file under target folder inside the solution
+ Screenshots are captured in Test-output
+ Exceptions are handled
 
 Steps to run this Project
 Download GitBash - https://git-scm.com/downloads and set up Git for first time
