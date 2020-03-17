@@ -23,7 +23,7 @@ public class LaunchBrowser {
 	    CreateFolder.CreateNewFolder(Constant.ScreenshotsLocation, FolderName);
 	   
 	    // Check browser
-	    System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
+	    System.setProperty("webdriver.chrome.driver","drivers/chrome/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		String actualTitle = "";
 		driver.get(Constant.Base_URL);

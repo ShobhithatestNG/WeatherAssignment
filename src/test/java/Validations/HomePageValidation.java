@@ -22,7 +22,7 @@ WebDriver driver;
 		
 		e.printStackTrace();
 	}
-		
+	}	
 	
 	@Test(priority =1 ,enabled =true)
 	public void TC02_VerifyMainPage() throws InterruptedException
