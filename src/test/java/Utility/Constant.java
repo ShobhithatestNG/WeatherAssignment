@@ -12,7 +12,8 @@ public class Constant {
 	public static String ScreenshotFileExtension = ".png";
 	public static String screenshotsFolder = "Screenshots";
 	public static String ScreenshotsLocation = Project_location+File.separatorChar+OutputFolder+File.separatorChar+screenshotsFolder;
-	
+	public static String SourceLoc ="RAFFLES PLACE";
+	public static String DestLoc = "CHANGI AIRPORT";
 	
 	//Constants for Home Page
 	public static String HomepageTitle ="mapSYNQ - Live Traffic Information Platform";

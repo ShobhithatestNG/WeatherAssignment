@@ -6,7 +6,8 @@
       <class name="Validations.HomePageValidation">
         <methods>
           <include name="VerifyLaunchBrowser"/>
-          <include name="TC02_VerifyMainPage"/>
+          <include name="TC03_VerifyMainPageLiveTab"/>
+          <include name="TC02_VerifyLeftPanel_DirectionTab"/>
         </methods>
       </class> <!-- Validations.HomePageValidation -->
     </classes>

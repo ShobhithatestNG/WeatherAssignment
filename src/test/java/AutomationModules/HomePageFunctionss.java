@@ -15,9 +15,9 @@ public class HomePageFunctionss {
 	    	WebElement SignIn =driver.findElement(By.linkText("Sign in"));
 	    	SignIn.click();
 	    	//Verify Mapsync logo
-	    	MainPage.getMapsSynqlogo().click();
+	    	MainPage.getMapsSynqlogo(driver).click();
 	        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
-	        MainPage.gettoggle_collapse().click();
+	        MainPage.gettoggle_collapse(driver).click();
 	      	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
 	        
 	}

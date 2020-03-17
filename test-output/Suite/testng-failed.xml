@@ -2,12 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
-    <parameter name="browser" value="Chrome"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="Validations.HomePageValidation">
         <methods>
           <include name="VerifyLaunchBrowser"/>
-          <include name="TC02_VerifyMainPage"/>
+          <include name="TC03_VerifyMainPageLiveTab"/>
         </methods>
       </class> <!-- Validations.HomePageValidation -->
     </classes>
