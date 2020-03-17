@@ -4,10 +4,10 @@ This git repository contains QA automation for the website: http://www.mapsynq.c
 The Programming language used is Java 
 
 The Tools used to automate this web application are :
-	• Selenium Webdriver - For automating the scripts
-	• Eclipse - For IDE
-	• TestNG - For Framework 
-	• Maven - Build Tool -POM
+	- • Selenium Webdriver - For automating the scripts
+	- • Eclipse - For IDE
+	- • TestNG - For Framework 
+	- • Maven - Build Tool -POM
 
 The following features  are implemented in this Project:
 	1.  Tests are runnable from the command line
