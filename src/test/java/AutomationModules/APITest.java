@@ -1,10 +1,20 @@
 package AutomationModules;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.Assert;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
 import Utility.Constant;
 import io.restassured.RestAssured;
+import io.restassured.mapper.ObjectMapper;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -14,14 +24,37 @@ import io.restassured.specification.RequestSpecification;
 	        RestAssured.baseURI = Constant.API_URL;
 	        RequestSpecification request = RestAssured.given();
 	        System.out.println("Executing API Test");
+	        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+	        Date datetoday = new Date();
+	        String todate = dateFormat.format(datetoday);
+	        System.out.println("The today is"+todate);
 	        
-	        JSONObject requestParams = new JSONObject();
-	        request.body(requestParams.toString());
-	        Response response = request.get("https://api.data.gov.sg/v1/environment/4-day-weather-forecast?date=2021-01-18");
+	    
+	        Response response = request.get("https://api.data.gov.sg/v1/environment/4-day-weather-forecast?date="+todate);
 	        System.out.println(response.getBody());
 	        //Check the request response status is whether successful or not
 	        Assert.assertEquals(response.getContentType(),"application/json");
 	        Assert.assertEquals(response.getStatusCode(), 200);
+	        //get day after tomorrow response
 	        
+	        Calendar cal1 = Calendar.getInstance();
+	        cal1.add(Calendar.DATE, -1);
+	        Date todate1 = cal1.getTime();    
+	        String dayafter = dateFormat.format(todate1);
+	        Response responseDayAfter = request.get("https://api.data.gov.sg/v1/environment/4-day-weather-forecast?date="+dayafter);
+	        System.out.println("the day after is");
+	        
+	        //System.out.println(dayafter);
+	        //System.out.println(responseDayAfter.prettyPrint());
+	        //System.out.println(responseDayAfter.headers().getList("Content-Type=application/json"));
+	        JSONObject requestParams = new JSONObject(responseDayAfter.getBody().toString());
+	        JsonArray issues_data  = (JsonArray) requestParams.get("items");
+	        for(int i=0; i<issues_data.size(); i++)  
+            {
+            JsonObject issues = (JsonObject) issues_data.get(i); 
+            String issues_key = (String) issues.get("forecasts").toString();
+            String project_name = (String) issues.get("timestamp").toString();  // returns null 
+            System.out.println("The name is"+project_name);
+           }
 	         }
 	}
