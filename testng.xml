@@ -3,7 +3,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="1" name="Test">
-  <parameter name="browser" value="chrome"></parameter>
    <!--
       change Parameter value to
       1."Chrome" if you want to run the test in chrome browser

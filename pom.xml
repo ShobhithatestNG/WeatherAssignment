@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>Mapsync</groupId>
-  <artifactId>Mapsync</artifactId>
+  <groupId>Weather</groupId>
+  <artifactId>Weather</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
   
@@ -9,15 +9,27 @@
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>3.141.59</version>
+    <version>4.0.0-alpha-7</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
 
+ <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.13</version>
+        <scope>test</scope>
+    </dependency>    
+    <dependency>
+        <groupId>io.rest-assured</groupId>
+        <artifactId>rest-assured</artifactId>
+        <version>4.2.0</version>
+        <scope>test</scope>
+    </dependency>
 
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-chrome-driver</artifactId>
-    <version>3.141.5</version>
+    <version>4.0.0-alpha-7</version>
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -25,8 +37,27 @@
    <dependency>				
             <groupId>org.testng</groupId>								
             <artifactId>testng</artifactId>								
-            <version>6.14.3</version>								
+            <version>7.3.0</version>								
             <scope>test</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-firefox-driver</artifactId>
+    <version>3.141.59</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.json/json -->
+<dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20190722</version>
+</dependency>
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>3.0.0</version>
+    <scope>test</scope>
 </dependency>
  <dependency>
             <groupId>org.uncommons</groupId>
@@ -57,3 +88,4 @@
     </plugins>
 </build>
 </project>
+
