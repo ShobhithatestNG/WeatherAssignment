@@ -19,9 +19,9 @@
 
 ## Pre-requisites:
 
-Install Java JDK and Setup path
-Downlaod Selenium webdriver jar( Also added as Maven Dependency)
-Install Eclipse IDE , Download Maven
+1. Install Java JDK and Setup path
+2. Downlaod Selenium webdriver jar( Also added as Maven Dependency)
+3. Install Eclipse IDE , Download Maven
 
 ## Steps to run this Project :
 	• Download GitBash -[GitHub](https://git-scm.com/downloads) and set up Git for first time
