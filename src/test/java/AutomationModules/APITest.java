@@ -15,6 +15,7 @@ import com.google.gson.JsonObject;
 import Utility.Constant;
 import io.restassured.RestAssured;
 import io.restassured.mapper.ObjectMapper;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -38,23 +39,34 @@ import io.restassured.specification.RequestSpecification;
 	        //get day after tomorrow response
 	        
 	        Calendar cal1 = Calendar.getInstance();
-	        cal1.add(Calendar.DATE, -1);
+	        cal1.add(Calendar.DATE, 0);
 	        Date todate1 = cal1.getTime();    
 	        String dayafter = dateFormat.format(todate1);
 	        Response responseDayAfter = request.get("https://api.data.gov.sg/v1/environment/4-day-weather-forecast?date="+dayafter);
 	        System.out.println("the day after is");
 	        
+	        String dataTest = responseDayAfter.prettyPrint();
+	        System.out.println(dataTest);
+	        
+	        
+	       
+	        JSONObject jsonObj = new JSONObject(dataTest);
+	        String name = jsonObj.getString("update_timestamp");
+	        System.out.println(name);
+	        
+	        
+	        
 	        //System.out.println(dayafter);
 	        //System.out.println(responseDayAfter.prettyPrint());
 	        //System.out.println(responseDayAfter.headers().getList("Content-Type=application/json"));
-	        JSONObject requestParams = new JSONObject(responseDayAfter.getBody().toString());
-	        JsonArray issues_data  = (JsonArray) requestParams.get("items");
-	        for(int i=0; i<issues_data.size(); i++)  
-            {
-            JsonObject issues = (JsonObject) issues_data.get(i); 
-            String issues_key = (String) issues.get("forecasts").toString();
-            String project_name = (String) issues.get("timestamp").toString();  // returns null 
-            System.out.println("The name is"+project_name);
-           }
+//	        JSONObject requestParams = new JSONObject(responseDayAfter.getBody().toString());
+//	        JsonArray issues_data  = (JsonArray) requestParams.get("items");
+//	        for(int i=0; i<issues_data.size(); i++)  
+//            {
+//            JsonObject issues = (JsonObject) issues_data.get(i); 
+//            String issues_key = (String) issues.get("forecasts").toString();
+//            String project_name = (String) issues.get("timestamp").toString();  // returns null 
+//            System.out.println("The name is"+project_name);
+//           }
 	         }
 	}

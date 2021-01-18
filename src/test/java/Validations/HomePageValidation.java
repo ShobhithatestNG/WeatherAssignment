@@ -33,8 +33,7 @@ System.out.print("Login Success");
 //		}
 //	}
 		
-@Test(priority =0 ,enabled =true)
-
+@Test(priority =2 ,enabled =true)
 public void TC01_StartBrowserandValidatePageTitle() 
 {
 	String actualTitle = "";
@@ -49,29 +48,30 @@ public void TC01_StartBrowserandValidatePageTitle()
    // HomePageFunctionss.ClickWeathertab(driver);
     //HomePageFunctionss.Clicktab2hourNowcast(driver);
     //HomePageFunctionss.Clicktab4hourForecast(driver);
-    
-    APITest.RegistrationSuccessful();
+    HomePageFunctionss.getweatherdetailsfromtab(driver); 
+    //APITest.RegistrationSuccessful();
 }
 
 @Test(priority =1 ,enabled =true)
 
-public void TC02_Validate4dayforecast_api() 
+public void TC02_Validate4dayforecast_dayaftertomorrowtempfromAPI() 
 {
-	String actualTitle = "";
-	driver.get(Constant.Base_URL);
-	
+	driver.get(Constant.Base_URL);	
     driver.manage().window().maximize();
-
+    HomePageFunctionss.ClickWeathertab(driver);
+    HomePageFunctionss.Click4dayoutlook(driver);    
+    APITest.RegistrationSuccessful();
     
+}
+@Test(priority =1 ,enabled =false)
+public void TC03_Validate4dayforecast_dayaftertomorrowtemp() 
+{	
+	driver.get(Constant.Base_URL);	
+    driver.manage().window().maximize();
     HomePageFunctionss.ClickWeathertab(driver);
     HomePageFunctionss.Click4dayoutlook(driver);
-   // HomePageFunctionss.ClickWeathertab(driver);
-    //HomePageFunctionss.Clicktab2hourNowcast(driver);
-    //HomePageFunctionss.Clicktab4hourForecast(driver);
-    
-    APITest.RegistrationSuccessful();
-}
 
+}
 //	@Test(priority =1 ,enabled =false)
 //	public void TC04_VerifyMainPage_TopPanel()
 //	{
@@ -83,7 +83,7 @@ public void TC02_Validate4dayforecast_api()
 	@AfterTest
 	public void CloseDriver()
 	{
-		System.out.println("closing all browser sessions");
+		System.out.println("closing all browser and webdriver sessions");
 		driver.quit();
 	}
 	
