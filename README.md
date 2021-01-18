@@ -13,3 +13,25 @@ Install Eclipse IDE - and import as Maven the project
 Pre-requisites:
 1. Install JAva JDK
 2. Install webdriver
+
+The Project Structure is as follows:
+1. Automation Modules
+  a.APItest.java
+  b.ForecastTableFunctions.java
+  c.HomePageFunctions.java
+  d.LaunchBrowser.java
+ 
+ 2.PageObjects
+  Mainpage.java
+ 
+ 3.Utility
+  a.browserseelction.java
+  b.constant.java
+  c.Createfolder.java
+  
+ 4.Validations
+  a.HomePagevalidation.java
+  
+5. pom.xml
+
+6.testng.xml
