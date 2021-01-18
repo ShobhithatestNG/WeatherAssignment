@@ -26,5 +26,29 @@
 ## Steps to run this Project :
 	• Download GitBash -[GitHub](https://git-scm.com/downloads) and set up Git for first time
 	• Create a folder and clone this Repository to your local directory 
-	• Open from Eclipse IDE and import as Maven the project 
+	• Open from Eclipse IDE and import as Maven the project
+	• Under Validations folder- HomePage Validation.java is the main class. Page obeject
+	
+## The Project Structure is as follows:
+
+Automation Modules 
+a. APItest.java 
+b. ForecastTableFunctions.java 
+c. HomePageFunctions.java 
+d .LaunchBrowser.java
+
+2.PageObjects
+ a. Mainpage.java
+
+3.Utility 
+ a. browserseelction.java 
+ b. constant.java 
+ c. Createfolder.java
+
+4. Validations 
+a. HomePagevalidation.java
+
+5.pom.xml
+
+6.testng.xml
 	
