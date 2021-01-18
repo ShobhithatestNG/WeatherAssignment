@@ -27,7 +27,7 @@
 	• Download GitBash -[GitHub](https://git-scm.com/downloads) and set up Git for first time
 	• Create a folder and clone this Repository to your local directory 
 	• Open from Eclipse IDE and import as Maven the project
-	• Under Validations folder- HomePage Validation.java is the main class. Page obeject
+	• Under Validations folder- HomePage Validation.java is the main class. Run this as TestNG test.
 	
 ## The Project Structure is as follows:
 
