@@ -32,6 +32,6 @@ The Project Structure is as follows:
  4.Validations
   a.HomePagevalidation.java
   
-5. pom.xml
+ 5.pom.xml
 
-6.testng.xml
+ 6.testng.xml
