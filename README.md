@@ -15,7 +15,8 @@ Pre-requisites:
 2. Install webdriver
 
 The Project Structure is as follows:
-1. Automation Modules
+ 
+ 1. Automation Modules
   a.APItest.java
   b.ForecastTableFunctions.java
   c.HomePageFunctions.java
