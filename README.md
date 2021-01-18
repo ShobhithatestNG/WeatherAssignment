@@ -31,24 +31,24 @@
 	
 ## The Project Structure is as follows:
 
-Automation Modules 
-a. APItest.java 
-b. ForecastTableFunctions.java 
-c. HomePageFunctions.java 
-d .LaunchBrowser.java
+# Automation Modules 
+ 1. APItest.java 
+ 2. ForecastTableFunctions.java 
+ 3. HomePageFunctions.java 
+ 4. LaunchBrowser.java
 
-2.PageObjects
- a. Mainpage.java
+# 2.PageObjects
+ 1. Mainpage.java
 
-3.Utility 
- a. browserseelction.java 
- b. constant.java 
- c. Createfolder.java
+# 3.Utility -
+ 1. browserseelction.java 
+ 2. constant.java 
+ 3. Createfolder.java
 
-4. Validations 
-a. HomePagevalidation.java
+# 4. Validations 
+1. HomePagevalidation.java
 
-5.pom.xml
+# 5.pom.xml
 
-6.testng.xml
+# 6.testng.xml
 	
