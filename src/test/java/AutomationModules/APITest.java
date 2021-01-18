@@ -2,6 +2,7 @@ package AutomationModules;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -21,7 +22,7 @@ import io.restassured.specification.RequestSpecification;
 
 	public class APITest 
 	{
-	    public static void RegistrationSuccessful() {
+	    public static ArrayList<Integer> RegistrationSuccessful() {
 	        RestAssured.baseURI = Constant.API_URL;
 	        RequestSpecification request = RestAssured.given();
 	        System.out.println("Executing API Test");
@@ -47,26 +48,29 @@ import io.restassured.specification.RequestSpecification;
 	        
 	        String dataTest = responseDayAfter.prettyPrint();
 	        System.out.println(dataTest);
+	        JSONObject json = new JSONObject(dataTest);
+	        JSONArray result = json.getJSONArray("items");
+	        JSONObject result1 = result.getJSONObject(0);
+	        System.out.println(result1.toString());
+	        System.out.println("test value");
+	        System.out.println(result1.get("forecasts"));
+	        JSONArray testValue = (JSONArray) result1.getJSONArray("forecasts");
+	        JSONObject test2 = testValue.getJSONObject(1);
+	        System.out.println("The value is" + test2.toString());
+	        JSONObject jsonfield = new JSONObject(test2.toString());
+	        String resultdate = (String) jsonfield.get("date");
 	        
+	        Object resulttemperature = jsonfield.get("temperature");
+	        JSONObject jsonfieldTemperature = new JSONObject(resulttemperature.toString());
+	        int resultTemphigh = (Integer) jsonfieldTemperature.get("high");
+	        int resultTemplow = (Integer) jsonfieldTemperature.get("low");
 	        
-	       
-	        JSONObject jsonObj = new JSONObject(dataTest);
-	        String name = jsonObj.getString("update_timestamp");
-	        System.out.println(name);
-	        
-	        
-	        
-	        //System.out.println(dayafter);
-	        //System.out.println(responseDayAfter.prettyPrint());
-	        //System.out.println(responseDayAfter.headers().getList("Content-Type=application/json"));
-//	        JSONObject requestParams = new JSONObject(responseDayAfter.getBody().toString());
-//	        JsonArray issues_data  = (JsonArray) requestParams.get("items");
-//	        for(int i=0; i<issues_data.size(); i++)  
-//            {
-//            JsonObject issues = (JsonObject) issues_data.get(i); 
-//            String issues_key = (String) issues.get("forecasts").toString();
-//            String project_name = (String) issues.get("timestamp").toString();  // returns null 
-//            System.out.println("The name is"+project_name);
-//           }
-	         }
+	        System.out.println("The result date is:" + resultdate.toString());
+	        System.out.println("The result temperature high is:" + resultTemphigh);
+	        System.out.println("The result temperature low is:" + resultTemplow);
+	        ArrayList<Integer> array = new ArrayList();
+	        array.add(resultTemphigh );
+	        array.add(resultTemplow );
+	        return array ;
+	     }
 	}

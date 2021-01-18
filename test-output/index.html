@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\user\AppData\Local\Temp\testng-eclipse-609805018\testng-customsuite.xml</span>
+                    <span>C:\Users\user\AppData\Local\Temp\testng-eclipse-107349348\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Validations.HomePageValidation" class="method navigator-link" hash-for-method="TC02_Validate4dayforecast_dayaftertomorrowtempfromAPI">TC02_Validate4dayforecast_dayaftertomorrowtempfromAPI</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Validations.HomePageValidation" class="method navigator-link" hash-for-method="TC03_Validate4dayforecast_dayaftertomorrowtempfromweb">TC03_Validate4dayforecast_dayaftertomorrowtempfromweb</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -141,14 +141,17 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC02_Validate4dayforecast_dayaftertomorrowtempfromAPI">
-                  </a> <!-- TC02_Validate4dayforecast_dayaftertomorrowtempfromAPI -->
-                  <span class="method-name">TC02_Validate4dayforecast_dayaftertomorrowtempfromAPI</span>
-                  <div class="stack-trace">org.json.JSONException: JSONObject[&quot;update_timestamp&quot;] not found.
-	at org.json.JSONObject.get(JSONObject.java:573)
-	at org.json.JSONObject.getString(JSONObject.java:836)
-	at AutomationModules.APITest.RegistrationSuccessful(APITest.java:54)
-	at Validations.HomePageValidation.TC02_Validate4dayforecast_dayaftertomorrowtempfromAPI(HomePageValidation.java:63)
+                  <a name="TC03_Validate4dayforecast_dayaftertomorrowtempfromweb">
+                  </a> <!-- TC03_Validate4dayforecast_dayaftertomorrowtempfromweb -->
+                  <span class="method-name">TC03_Validate4dayforecast_dayaftertomorrowtempfromweb</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [34] but found [33]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.Assert.assertEquals(Assert.java:917)
+	at Validations.HomePageValidation.TC03_Validate4dayforecast_dayaftertomorrowtempfromweb(HomePageValidation.java:80)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -201,7 +204,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\user\AppData\Local\Temp\testng-eclipse-609805018\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\user\AppData\Local\Temp\testng-eclipse-107349348\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -252,18 +255,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC02_Validate4dayforecast_dayaftertomorrowtempfromAPI')
+data.setCell(0, 1, 'TC03_Validate4dayforecast_dayaftertomorrowtempfromweb')
 data.setCell(0, 2, 'Validations.HomePageValidation')
-data.setCell(0, 3, 7142);
+data.setCell(0, 3, 6054);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'TC01_StartBrowserandValidatePageTitle')
 data.setCell(1, 2, 'Validations.HomePageValidation')
-data.setCell(1, 3, 1688);
+data.setCell(1, 3, 644);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -284,7 +287,7 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">Validations.HomePageValidation</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TC03_Validate4dayforecast_dayaftertomorrowtemp</span>
+                <span class="ignored-method-name">TC02_Validate4dayforecast_dayaftertomorrowtempfromAPI</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -304,16 +307,16 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">TC02_Validate4dayforecast_dayaftertomorrowtempfromAPI</span>
-                <span class="method-start">5348 ms</span>
+                <span class="method-name">TC03_Validate4dayforecast_dayaftertomorrowtempfromweb</span>
+                <span class="method-start">4434 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC01_StartBrowserandValidatePageTitle</span>
-                <span class="method-start">12498 ms</span>
+                <span class="method-start">10494 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">CloseDriver</span>
-                <span class="method-start">14188 ms</span>
+                <span class="method-start">11140 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

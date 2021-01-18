@@ -2,26 +2,29 @@
 <testng-results ignored="1" total="3" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-18T09:08:34 SGT" name="Default suite" finished-at="2021-01-18T09:08:49 SGT" duration-ms="14884">
+  <suite started-at="2021-01-18T22:13:48 SGT" name="Default suite" finished-at="2021-01-18T22:14:00 SGT" duration-ms="12104">
     <groups>
     </groups>
-    <test started-at="2021-01-18T09:08:34 SGT" name="Default test" finished-at="2021-01-18T09:08:49 SGT" duration-ms="14884">
+    <test started-at="2021-01-18T22:13:48 SGT" name="Default test" finished-at="2021-01-18T22:14:00 SGT" duration-ms="12104">
       <class name="Validations.HomePageValidation">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Validations.HomePageValidation@39529185]" started-at="2021-01-18T09:08:34 SGT" name="setup" finished-at="2021-01-18T09:08:39 SGT" duration-ms="5286" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Validations.HomePageValidation@39529185]" started-at="2021-01-18T22:13:48 SGT" name="setup" finished-at="2021-01-18T22:13:53 SGT" duration-ms="4397" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="TC02_Validate4dayforecast_dayaftertomorrowtempfromAPI()[pri:1, instance:Validations.HomePageValidation@39529185]" started-at="2021-01-18T09:08:39 SGT" name="TC02_Validate4dayforecast_dayaftertomorrowtempfromAPI" finished-at="2021-01-18T09:08:46 SGT" duration-ms="7142" status="FAIL">
-          <exception class="org.json.JSONException">
+        <test-method signature="TC03_Validate4dayforecast_dayaftertomorrowtempfromweb()[pri:1, instance:Validations.HomePageValidation@39529185]" started-at="2021-01-18T22:13:53 SGT" name="TC03_Validate4dayforecast_dayaftertomorrowtempfromweb" finished-at="2021-01-18T22:13:59 SGT" duration-ms="6054" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[JSONObject["update_timestamp"] not found.]]>
+              <![CDATA[expected [34] but found [33]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.json.JSONException: JSONObject["update_timestamp"] not found.
-at org.json.JSONObject.get(JSONObject.java:573)
-at org.json.JSONObject.getString(JSONObject.java:836)
-at AutomationModules.APITest.RegistrationSuccessful(APITest.java:54)
-at Validations.HomePageValidation.TC02_Validate4dayforecast_dayaftertomorrowtempfromAPI(HomePageValidation.java:63)
+              <![CDATA[java.lang.AssertionError: expected [34] but found [33]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at Validations.HomePageValidation.TC03_Validate4dayforecast_dayaftertomorrowtempfromweb(HomePageValidation.java:80)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -52,15 +55,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.json.JSONException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC02_Validate4dayforecast_dayaftertomorrowtempfromAPI -->
-        <test-method signature="TC01_StartBrowserandValidatePageTitle()[pri:2, instance:Validations.HomePageValidation@39529185]" started-at="2021-01-18T09:08:46 SGT" name="TC01_StartBrowserandValidatePageTitle" finished-at="2021-01-18T09:08:48 SGT" duration-ms="1688" status="PASS">
+        </test-method> <!-- TC03_Validate4dayforecast_dayaftertomorrowtempfromweb -->
+        <test-method signature="TC01_StartBrowserandValidatePageTitle()[pri:2, instance:Validations.HomePageValidation@39529185]" started-at="2021-01-18T22:13:59 SGT" name="TC01_StartBrowserandValidatePageTitle" finished-at="2021-01-18T22:13:59 SGT" duration-ms="644" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC01_StartBrowserandValidatePageTitle -->
-        <test-method is-config="true" signature="CloseDriver()[pri:0, instance:Validations.HomePageValidation@39529185]" started-at="2021-01-18T09:08:48 SGT" name="CloseDriver" finished-at="2021-01-18T09:08:49 SGT" duration-ms="680" status="PASS">
+        <test-method is-config="true" signature="CloseDriver()[pri:0, instance:Validations.HomePageValidation@39529185]" started-at="2021-01-18T22:13:59 SGT" name="CloseDriver" finished-at="2021-01-18T22:14:00 SGT" duration-ms="958" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseDriver -->

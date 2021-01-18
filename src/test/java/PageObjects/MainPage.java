@@ -29,9 +29,20 @@ public class MainPage {
 		     return Element;
 	}
 	
-	public static WebElement getweatherdetails(WebDriver driver)
+	public static WebElement getweatherdetails_date(WebDriver driver)
 	{	
 		 WebElement Element =driver.findElement(By.xpath("//div/div/div[3]/div/div[1]/table/tbody/tr[3]/td[1]"));
+		     return Element;
+	}
+	public static WebElement getweatherdetails_DayAfterTom_high(WebDriver driver)
+	{	
+		 WebElement Element =driver.findElement(By.xpath("//div/div/div[3]/div/div[1]/table/tbody/tr[3]/td[2]/span[1]"));
+		     return Element;
+	}
+	
+	public static WebElement getweatherdetails_DayAfterTom_low(WebDriver driver)
+	{	
+		 WebElement Element =driver.findElement(By.xpath("//div/div/div[3]/div/div[1]/table/tbody/tr[3]/td[2]/span[2]"));
 		     return Element;
 	}
 
